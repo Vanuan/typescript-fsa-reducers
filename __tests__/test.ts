@@ -1,4 +1,4 @@
-import actionCreatorFactory from "typescript-fsa";
+import actionCreatorFactory from "typescript-fsa-vanuan";
 import {
     ReducerBuilder,
     reducerWithInitialState,

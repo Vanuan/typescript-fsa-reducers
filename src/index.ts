@@ -1,4 +1,4 @@
-import { Action, ActionCreator, AnyAction } from "typescript-fsa";
+import { Action, ActionCreator, AnyAction } from "typescript-fsa-vanuan";
 
 export interface ReducerBuilder<InS extends OutS, OutS = InS> {
     case<P>(
@@ -23,7 +23,7 @@ export interface ReducerBuilder<InS extends OutS, OutS = InS> {
         actionCreators: [
             ActionCreator<P1>,
             ActionCreator<P2>,
-            ActionCreator<P3>
+            ActionCreator<P3>,
         ],
         handler: Handler<InS, OutS, P1 | P2 | P3>,
     ): ReducerBuilder<InS, OutS>;
@@ -32,7 +32,7 @@ export interface ReducerBuilder<InS extends OutS, OutS = InS> {
             ActionCreator<P1>,
             ActionCreator<P2>,
             ActionCreator<P3>,
-            ActionCreator<P4>
+            ActionCreator<P4>,
         ],
         handler: Handler<InS, OutS, P1 | P2 | P3 | P4>,
     ): ReducerBuilder<InS, OutS>;
@@ -54,7 +54,7 @@ export interface ReducerBuilder<InS extends OutS, OutS = InS> {
         actionCreators: [
             ActionCreator<P1>,
             ActionCreator<P2>,
-            ActionCreator<P3>
+            ActionCreator<P3>,
         ],
         handler: Handler<InS, OutS, Action<P1 | P2 | P3>>,
     ): ReducerBuilder<InS, OutS>;
@@ -63,7 +63,7 @@ export interface ReducerBuilder<InS extends OutS, OutS = InS> {
             ActionCreator<P1>,
             ActionCreator<P2>,
             ActionCreator<P3>,
-            ActionCreator<P4>
+            ActionCreator<P4>,
         ],
         handler: Handler<InS, OutS, Action<P1 | P2 | P3 | P4>>,
     ): ReducerBuilder<InS, OutS>;
